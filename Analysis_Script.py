@@ -6,7 +6,7 @@ import shutil
 import seaborn as sns
 
 # Define paths
-data_folder = 'E:\\PycharmProjects\\data'
+data_folder = 'data'
 output_folder = 'plots'
 event_data_file = os.path.join(data_folder, 'Company_Event_analysis_data.csv')
 
