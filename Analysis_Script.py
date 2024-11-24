@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import os
 import shutil
 import seaborn as sns
+import matplotlib.cm as cm
+import numpy as np
 
 # Define paths
 data_folder = 'data'
@@ -132,43 +134,35 @@ def plot_sentiment_and_stock_price(company_name, company_data, event_dates):
     sentiment_data = []
     stock_data = []
 
-    for event_date in event_dates:
-        print(f"\nProcessing data for event date: {event_date}")  # Log event date being processed
+    # Define the window around the events
+    window_start = min(event_dates) - pd.Timedelta(days=10)
+    window_end = max(event_dates) + pd.Timedelta(days=10)
 
-        # Define the window around the event
-        window_start = event_date - pd.Timedelta(days=10)
-        window_end = event_date + pd.Timedelta(days=10)
-        print(f"{window_start}-{window_end}")
+    # Prepare data for sentiment plot
+    twitter_sentiment_window = company_data.get('twitter', pd.DataFrame()).set_index('Date')[
+        'Smoothed_Sentiment'].loc[window_start:window_end]
+    youtube_sentiment_window = company_data.get('youtube', pd.DataFrame()).set_index('Date')[
+        'Smoothed_Sentiment'].loc[window_start:window_end]
 
-        # Prepare data for sentiment plot
-        twitter_sentiment_window = company_data.get('twitter', pd.DataFrame()).set_index('Date')[
-                                       'Smoothed_Sentiment'].loc[window_start:window_end]
-        youtube_sentiment_window = company_data.get('youtube', pd.DataFrame()).set_index('Date')[
-                                       'Smoothed_Sentiment'].loc[window_start:window_end]
+    # Prepare data for stock price plot
+    stock_price_window = company_data.get('stock_price', pd.DataFrame()).loc[window_start:window_end, 'Close']
 
-        # Convert dates to "Days from Event"
-        twitter_sentiment_window.index = (twitter_sentiment_window.index - event_date).days
-        youtube_sentiment_window.index = (youtube_sentiment_window.index - event_date).days
-
-        sentiment_data.append(twitter_sentiment_window)
-        sentiment_data.append(youtube_sentiment_window)
-
-        # Prepare data for stock price plot
-        stock_price_window = company_data.get('stock_price', pd.DataFrame()).loc[window_start:window_end, 'Close']
-        stock_price_window.index = (
-                    stock_price_window.index - event_date).days  # Convert stock dates to "Days from Event"
-
-        stock_data.append(stock_price_window)
+    # Generate a colormap for events
+    cmap = cm.get_cmap('tab10', len(event_dates))  # Use a qualitative colormap
+    event_colors = cmap(np.linspace(0, 1, len(event_dates)))
 
     # Plot Sentiment Data
     plt.figure(figsize=(12, 8))
-    for sentiment in sentiment_data:
-        if not sentiment.empty:
-            plt.plot(sentiment.index, sentiment, label=f"Sentiment Trend", linestyle='--')
+    if not twitter_sentiment_window.empty:
+        plt.plot(twitter_sentiment_window.index, twitter_sentiment_window, label="Twitter Sentiment", linestyle='--')
+    if not youtube_sentiment_window.empty:
+        plt.plot(youtube_sentiment_window.index, youtube_sentiment_window, label="YouTube Sentiment", linestyle='-.')
 
-    plt.axvline(0, color='black', linestyle='--', label="Event Day")
+    for event_date, color in zip(event_dates, event_colors):
+        plt.axvline(event_date, color=color, linestyle='--', label=f"Event: {event_date.strftime('%Y-%m-%d')}")
+
     plt.title(f"Smoothed Sentiment Trends for {company_name}")
-    plt.xlabel("Days from Event")
+    plt.xlabel("Date")
     plt.ylabel("Smoothed Sentiment Score")
     plt.legend()
     plt.grid(True)
@@ -180,13 +174,14 @@ def plot_sentiment_and_stock_price(company_name, company_data, event_dates):
 
     # Plot Stock Price Data
     plt.figure(figsize=(12, 8))
-    for stock in stock_data:
-        if not stock.empty:
-            plt.plot(stock.index, stock, label=f"Stock Price Trend", color='blue')
+    if not stock_price_window.empty:
+        plt.plot(stock_price_window.index, stock_price_window, label="Stock Price", color='blue')
 
-    plt.axvline(0, color='black', linestyle='--', label="Event Day")
+    for event_date, color in zip(event_dates, event_colors):
+        plt.axvline(event_date, color=color, linestyle='--', label=f"Event: {event_date.strftime('%Y-%m-%d')}")
+
     plt.title(f"Stock Price Trends for {company_name}")
-    plt.xlabel("Days from Event")
+    plt.xlabel("Date")
     plt.ylabel("Stock Price ($)")
     plt.legend()
     plt.grid(True)
@@ -195,7 +190,6 @@ def plot_sentiment_and_stock_price(company_name, company_data, event_dates):
     plt.savefig(stock_price_plot_file)
     plt.close()
     print(f"Stock price plot saved: {stock_price_plot_file}")
-
 
 # Plot sentiment and stock price scatter plot and correlation heatmap
 def plot_scatter_and_heatmap(company_name, company_data, event_dates):
