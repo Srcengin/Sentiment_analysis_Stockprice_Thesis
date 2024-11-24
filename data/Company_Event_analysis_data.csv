@@ -1,4 +1,5 @@
 ﻿Company,Event Type,Event Date,Event  Description,CompanyTitle
+<<<<<<< HEAD
 Apple Inc.,Earnings Report,28/10/2021,Q4 2021 Earnings Report,Apple
 ,Product Launch,18/10/2021,MacBook Pro M1 Pro/Max Launch,Apple
 ,Apple's Market Capitalization Reaches $3 Trillion,03/01/2022,Apple became the first company to reach a $3 trillion market capitalization,Apple
@@ -69,3 +70,75 @@ Nio Inc.,Earning Reports,09/11/2021,Q3 2021 Earnings Report,NIO
 ,"NIO's 1,000th Battery Swap Station Operational",06/07/2022,"NIO announced the operation of its 1,000th battery swap station in China, enhancing its energy service network.",NIO
 ,Earnings Report,07/09/2022,Q2 2022 Quarterly earnings update on production capacity,NIO
 ,NIO Berlin 2022 Announcement,20/09/2022,"NIO announced it would hold ""NIO Berlin 2022,"" its European launch event, in Berlin on October 7, 2022 (22.09)",NIO
+=======
+Apple Inc.,Earnings Report,28-10-2021,Q4 2021 Earnings Report,Apple
+,Product Launch,18-10-2021,MacBook Pro M1 Pro/Max Launch,Apple
+,Apple's Market Capitalization Reaches $3 Trillion,03-01-2022,Apple became the first company to reach a $3 trillion market capitalization,Apple
+,Earnings Report, 27-01-2022,Q1 2022 Earnings Report,Apple
+,Launch of iPhone SE (3rd Generation) and The Apple Studio Display,08-03-2022,"Peek Performance"" event.",Apple
+,Earnings Report,28-04-2022,Q2 2022 Earnings Report,Apple
+,Conference,06-06-2022,Start of WWDC 2022 showcasing iOS 16 and software updates,Apple
+,Conference,10-06-2022,Last day of WWDC 2022,Apple
+,Earnings Report,28-07-2022,Q3 2022 Earnings Report,Apple
+,iPhone 14 Launch - Announcement,07-09-2021,"Announcement of iPhone 14 features, specs, and pricing",Apple
+,iPhone 14 Launch - Release,16-09-2022,"Release date for iPhone 14, available for purchase",Apple
+Tesla Inc.,Earnings Report,20-10-2021,Q3 2021 Earnings Report,Tesla
+,Product Update,26-01-2022,Production timeline update for Tesla’s highly anticipated Cybertruck,Tesla
+,Opening of Giga Berlin,22-03-2022,Tesla officially opened its Gigafactory in Berlin,Tesla
+,Product Update,02-07-2022,Further production updates impacting sentiment for Tesla,Tesla
+,Opening of Giga Texas,07-04-2022,Tesla inaugurated its Gigafactory in Texas,Tesla
+,Earnings Report,19-04-2022,Q1 2022 Earnings Report,Tesla
+,Stock Split Announcement,10-06-2022,Tesla announced a 3-for-1 stock split proposal,Tesla
+,Earnings Report,20-07-2022,Q2 2022 Earnings Report,Tesla
+,Stock Split Approval,04-08-2022,Tesla shareholders approved the 3-for-1 stock split.,Tesla
+,Stock Split Effective Date,25-08-2022,Tesla's 3-for-1 stock split took effect,Tesla
+Microsoft Corp.,Earnings Report,26-10-2021,Q1 2022 Earnings Report,Microsoft
+,Product Launch,05-10-2021,Windows 11 Release,Microsoft
+,Acquisition,18-01-2022,Activision Blizzard Acquisition Announced,Microsoft
+,Earnings Report,25-01-2022,Q2 2022 Earnings Report,Microsoft
+,Completion of Nuance Communications Acquisition,04-03-2022,Microsoft completed the acquisition of Nuance Communications,Microsoft
+,Earnings Report,26-04-2022,Q3 2022 Earnings Report,Microsoft
+,Earnings Report,26-07-2022,Q4 2022 Earnings Report,Microsoft
+"Amazon.com, Inc.",Earnings Report,28-10-2021,Q3 2021 Earnings Report,Amazon
+,Sales Event,27-11-2021,Black Friday/Cyber Monday Sales,Amazon
+,Earnings Report,03-02-2022,Q4 2021 Earnings Report,Amazon
+,Completion of MGM Acquisition,17-03-2022,"Amazon finalized the acquisition of MGM Studios, expanding its content library for Prime Video",Amazon
+,Earnings Report,28-04-2022,Q1 2022 Earnings Report,Amazon
+,Sales Event,12-07-2022,Prime Day 2022,Amazon
+,Earnings Report,28-07-2022,Q2 2022 Earnings Report,Amazon
+"**Meta Platforms, Inc.",Earnings Report,25-10-2021,Q3 2021 Earnings Report(Facebook),Meta
+(formerly Facebook)**,Corporate Change,28-10-2021,Rebranding to Meta,Meta
+,Launch of Horizon Worlds,09-12-2021,"Meta launched its VR-based social metaverse platform, Horizon Worlds, in the U.S. and Canada",Meta
+,Announcement of AI Research SuperCluster,24-01-2022,Meta announced one of the world's fastest AI supercomputers to advance its metaverse efforts,Meta
+,Product Update,25-01-2022,Meta’s initial announcements and focus on metaverse project,Meta
+,Earnings Report,02-02-2022,Q4 2021 Earnings Report,Meta
+,Introduction of Reels on Facebook globally,22-02-2022,Meta expanded the Reels feature to Facebook,Meta
+,Earnings Report,27-04-2022,Q1 2022 Earnings Report,Meta
+,Conference,02-06-2022,F8 Refresh Conference,Meta
+,Earnings Report,27-07-2022,Q2 2022 Earnings Report,Meta
+TSMC,Earnings Report,14-10-2021,Q3 2021 Earnings Report,TSM
+,Collaboration with Sony on Japan Fab,09-11-2021,"TSMC and Sony announced a joint venture to build a semiconductor fab in Japan, enhancing production capabilities",TSM
+,Expansion of Arizona Fab,15-12-2021,"TSMC announced plans to expand its semiconductor fabrication plant in Arizona, increasing U.S. production capacity",TSM
+,Earnings Report,13-01-2022,Q4 2021 Earnings Report,TSM
+,Technology Update,15-01-2022,3nm and 2nm Chip Advancements (Initial announcement on TSMC’s advanced chip production capabilities),TSM
+,Earnings Report,14-04-2022,Q1 2022 Earnings Report,TSM
+,Announcement of 2nm Process Technology,01-06-2022,"TSMC announced plans for 2nm process technology, aiming for production by 2025, indicating technological leadership",TSM
+,Technology Update,20-06-2022,Progress update on development of 3nm and 2nm chip technology,TSM
+,Earnings Report,14-07-2022,Q2 2022 Earnings Report,TSM
+P&G,AGM 2021,12-10-2021,Annual General Meeting discussing strategy and leadership changes,PG
+,Earnings Report,20-10-2021,Q1 earnings with financial outlook,PG
+,Earnings Report,19-01-2022, Q2 Earnings and business insights for fiscal,PG
+,Product Innovation Launch,05-03-2022,Launch of sustainable personal care products,PG
+,Dividend Increase Announcement,12-04-2022,P&G announced a 5% increase in its quarterly dividend,PG
+,Earnings Report,20-04-2022,Q3 2022 Earnings Report,PG
+,Signal 2022 Conference,13-07-2022,"P&G hosted its annual Signal conference, focusing on future innovations and strategies",PG
+,Earnings Report,29-07-2022,Q4 2022 Earnings Report,PG
+,Dividend Announcement,15-12-2021,Announcement of quarterly dividend,PG
+Nio Inc.,Earning Reports,09-11-2021,Q3 2021 Earnings Report,NIO
+,NIO Day 2021,18-12-2021,Annual event showcasing new vehicle models and technologies,NIO
+,Earning Reports,24-03-2022,Q4 2021 Earnings Report,NIO
+, Earnings Report,09-06-2022,Q1 2022 Financial performance update with market outlook,NIO
+,"NIO's 1,000th Battery Swap Station Operational",06-07-2022,"NIO announced the operation of its 1,000th battery swap station in China, enhancing its energy service network.",NIO
+,Earnings Report,07-09-2022,Q2 2022 Quarterly earnings update on production capacity,NIO
+,NIO Berlin 2022 Announcement,20-09-2022,"NIO announced it would hold ""NIO Berlin 2022,"" its European launch event, in Berlin on October 7, 2022 (22.09)",NIO
+>>>>>>> e109978d376df5148cf5076bfdedc4032f1d5352
